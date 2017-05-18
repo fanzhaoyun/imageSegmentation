@@ -1,0 +1,37 @@
+clear;
+clc;
+
+load img_list.mat
+
+DBpath = 'D:\ImageSource\Weizmann_Seg_DB_1obj\';
+for j = 1:length(fls)
+    filepath = strcat(DBpath,fls(j).name,'\human_seg\');
+    hum1 = strcat(DBpath,fls(j).name,'\hum1\');
+    hum2 = strcat(DBpath,fls(j).name,'\hum2\');
+    hum3 = strcat(DBpath,fls(j).name,'\hum3\');
+    if ~exist(hum1)
+        mkdir(hum1);
+    end
+    if ~exist(hum2)
+        mkdir(hum2);
+    end
+    if ~exist(hum3)
+        mkdir(hum3);
+    end
+    l=dir(filepath);
+    fileinde
+    for k=1:length(l)
+        if (l(k).isdir)
+            continue;
+        end;
+        if k == 1
+            im=strcat(filepath,l(k).name);
+        elseif k == 2
+            
+        else
+            
+        end
+    end;
+    
+    copyfile();
+end
